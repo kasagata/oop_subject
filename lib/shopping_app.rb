@@ -2,6 +2,7 @@ require_relative "shopping_app/seller"
 require_relative "shopping_app/item"
 require_relative "shopping_app/customer"
 
+#Itemインスタンスで以下のアイテムを生成
 seller = Seller.new("DICストア")
 10.times{ Item.new("CPU", 40830, seller) }
 10.times{ Item.new("メモリー", 13880, seller) }
@@ -18,7 +19,7 @@ puts "🤖 あなたの名前を教えてください"
 customer = Customer.new(gets.chomp)
 
 puts "🏧 ウォレットにチャージする金額を入力にしてください"
-customer.wallet.deposit(gets.chomp.to_i)
+customer.wallet.deposit(gets.chomp.to_i) 
 
 puts "🛍️ ショッピングを開始します"
 end_shopping = false
